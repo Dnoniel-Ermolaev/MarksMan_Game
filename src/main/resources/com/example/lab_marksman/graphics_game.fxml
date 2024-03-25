@@ -130,6 +130,7 @@
    </Pane>
    <Button fx:id="Start_button" layoutX="24.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleStartButtonAction" text="Start Game" />
    <Button fx:id="Stop_button" layoutX="120.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleStopButtonAction" text="Stop Game" />
+   <Button fx:id="Ready" layoutX="302.0" layoutY="561.0" mnemonicParsing="false" text="Ready" onAction="#handleReadyButtonAction"/>
    <Button fx:id="Shoot_button" layoutX="215.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleShootButtonAction" prefHeight="25.0" prefWidth="68.0" text="Shoot" />
    <Label layoutX="655.0" layoutY="41.0" text="СЧЁТ:" />
    <Label fx:id="points" layoutX="690.0" layoutY="41.0" prefHeight="17.0" prefWidth="83.0" text="0" />

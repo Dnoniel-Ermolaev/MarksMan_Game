@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
@@ -22,6 +23,17 @@ public class GameController {
     public Line arrow;
     @FXML
     public Label gameStatus; // Убедитесь, что этот элемент добавлен в ваш FXML файл
+    public Button Ready;
+    private GameClient gameClient;
+    public void updatePlayerColor(String color) {
+        Platform.runLater(() -> {
+            // Измените свойство 'fill' стрелка на новый цвет
+            shooter.setFill(Color.web(color));
+        });
+    }
+    public void initClient(GameClient gameClient) {
+        this.gameClient = gameClient;
+    }
 
     public void updateGameStatus(String status) {
         Platform.runLater(() -> gameStatus.setText(status));
@@ -78,6 +90,10 @@ public class GameController {
             }
         }
         shooter.requestFocus();
+    }
+    @FXML
+    private void handleReadyButtonAction() {
+
     }
     @FXML
     private void handleStartButtonAction() {

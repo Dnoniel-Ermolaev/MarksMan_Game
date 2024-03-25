@@ -117,11 +117,6 @@ public class GameLogic implements Runnable {
         running = false;
         // Не сбрасываем состояния, чтобы позволить возобновление
     }
-    private void runGameLogic() {
-        controller.gameThread = new Thread(this);
-        controller.gameThread.setDaemon(true);
-        controller.gameThread.start();
-    }
 
     public void resumeGame() {
         // Метод resumeGame должен корректно сигнализировать о возобновлении игрового процесса
